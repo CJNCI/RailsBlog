@@ -3,9 +3,12 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
+      <a href="/articles/<%article.id %>">
       <%= article.title %>
       <!--Evaluate whats inside and output value -->
+      <br>
       <%= article.body %>
+      </a>
     </li>
   <% end %>
 </ul>
