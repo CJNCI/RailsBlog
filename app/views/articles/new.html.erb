@@ -4,11 +4,21 @@
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
+    <% @article.errors.full_messages_for(:title).each do |message|
+    %>
+    <div><%= message %></div>
+
+    <% end %>
   </div>
 
   <div>
     <%= form.label :body %><br>
     <%= form.text_area :body %>
+    <% @article.errors.full_messages_for(:body).each do |message|
+    %>
+
+      <div><%= message %></div>
+    <% end %>
   </div>
 
   <div>
@@ -21,4 +31,8 @@
       In the form_with block, we call methods like
       label and text_field on the builder to
       output appropriate form elements
+
+      full_messages_for returns array of user-friendly error
+      message for a specified attribute, if theres no errors
+      the array will return empty
 -->

@@ -16,15 +16,14 @@ class ArticlesController < ApplicationController
   end
 
   def create #Instantiates new article with values for title and body and tries to save
-
-    @article = Article.new(title: "...", body: "...") # Dummy values
+    @article = Article.new(article_params)
 
     #If article is saved successfully, browser redirected to article's page
     # Else, action redisplays the form with status code Unprocessable Entity
     if @article.save
-      redirect_to article
+      redirect_to @article
     else
-      render :new, status: unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
