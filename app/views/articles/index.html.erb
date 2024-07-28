@@ -3,11 +3,11 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <a href="/articles/<%article.id %>">
-      <%= article.title %>
-      <!--Evaluate whats inside and output value -->
+     <% link_to article.title, article %>
+      <!--Using link_to more useful, first argument is
+      the link's text, second argument is the destination-->
+
       <br>
-      <%= article.body %>
       </a>
     </li>
   <% end %>
