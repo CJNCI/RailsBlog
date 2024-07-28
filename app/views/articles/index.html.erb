@@ -1,1 +1,11 @@
-<h1>Hello, Rails!</h1>
+<h1>Articles</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title %>
+      <!--Evaluate whats inside and output value -->
+      <%= article.body %>
+    </li>
+  <% end %>
+</ul>
