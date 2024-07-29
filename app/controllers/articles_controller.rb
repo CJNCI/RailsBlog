@@ -27,6 +27,24 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # Edit and Update actions resemble 'new' and 'create'
+  def edit
+    @article = Article.find(params[:id])
+  end #Fetches article from DB then stores it in @article
+
+  def update
+    # Re-fetches article from db, and attempts to update with submitted
+    # form data filtered by article_params
+
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
   def article_params
     params.require(:article).permit(:title, :body)
