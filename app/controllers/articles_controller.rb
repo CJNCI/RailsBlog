@@ -45,6 +45,18 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def destroy
+    @article = Article.find(params[:id])
+    # Finds article with parameter of id
+    # and saves it to @article
+    # Article object is then deleted from db
+    @article.destroy
+
+    redirect_to root_path, status: :see_other
+    # Redirect to home page, 'see_other' sets
+    # HTTP status code for redirect action
+  end
+
   private
   def article_params
     params.require(:article).permit(:title, :body)

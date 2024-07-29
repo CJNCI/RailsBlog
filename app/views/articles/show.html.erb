@@ -1,3 +1,16 @@
 <h1><%= @article.title %></h1>
 
 <p><%= @article.body %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  <!-- Creates a hyperlink with text "edit" -->
+  <li><%= link_to "Destroy", article_path(@article),
+  data:{
+    turbo_method: :delete, # Specifies that link
+    # should be treated as a Delete request when clicked
+    turbo_confirm: "Are you sure?"
+  }%></li>
+
+
+</ul>
