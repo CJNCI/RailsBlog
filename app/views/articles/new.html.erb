@@ -1,32 +1,33 @@
 <h1>New Article</h1>
+<%= render "form", article: @article %>
 
-<%= form_with model: @article do |form| %>
+<!--%= form_with model: @article do |form| %>
   <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% @article.errors.full_messages_for(:title).each do |message|
+    <!%= form.label :title %><br>
+    <!%= form.text_field :title %>
+    <!% @article.errors.full_messages_for(:title).each do |message|
     %>
-    <div><%= message %></div>
+    <div><!%= message %></div>
 
-    <% end %>
+    <!% end %>
   </div>
 
   <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-    <% @article.errors.full_messages_for(:body).each do |message|
+    <!%= form.label :body %><br>
+    <!%= form.text_area :body %>
+    <!% @article.errors.full_messages_for(:body).each do |message|
     %>
 
-      <div><%= message %></div>
-    <% end %>
+      <div><!%= message %></div>
+    <!% end %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <!%= form.submit %>
   </div>
-<% end %>
+<!% end %>
 
-<!--  form_with helper instantiates a form builder
+  form_with helper instantiates a form builder
 
       In the form_with block, we call methods like
       label and text_field on the builder to

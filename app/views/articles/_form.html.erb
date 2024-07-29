@@ -1,0 +1,40 @@
+<!--The same as new.html.erb
+  but all instances of @article is replaced with
+  'article'. This is because partials are shared
+  and its best to not depend on specific instance
+  variables, instead better to pass the article
+   to the partial as a local variable-->
+
+<%= form_with model: article do|form| %>
+  <!-- Creates a form using form_with helper,
+   which is binded to the article model-->
+  <div>
+    <%= form.label :title %><br>
+    <!-- Generate label for 'title' attribute-->
+
+    <%= form.text_field :title %>
+    <!-- Generate input field for 'title'-->
+    <% article.errors.full_messages_for(:title).each do |message| %>
+    <!-- Iterates over any validation error messages
+     related to 'title'-->
+
+      <div>
+      <%= message %>
+    </div>
+      <% end %>
+  </div>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %><br>
+    <% article.errors.full_messages_for(:body).each do |message| %>
+      <div>
+        <%= message %>
+      </div>
+      <% end %>
+    </div>
+
+  <div><%= form.submit %></div>
+
+
+<% end %>
