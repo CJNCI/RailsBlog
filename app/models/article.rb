@@ -1,3 +1,5 @@
+# Article class inherits from ApplicationRecord and checks that title and body are present
+
 # frozen_string_literal: true
 
 class Article < ApplicationRecord

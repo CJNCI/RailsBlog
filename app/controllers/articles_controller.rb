@@ -1,7 +1,7 @@
 # This is Articles_controller which handles the logic to be performed on article objects
 
 # frozen_string_literal: true
-#
+
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
