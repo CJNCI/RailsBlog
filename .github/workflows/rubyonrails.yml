@@ -50,6 +50,8 @@ jobs:
       - name: Set execute permission for bin/rails
         run: chmod +x bin/rails
 
+      - name: Setup DB
+        run: bin/rails db:create db:migrate
       - name: Set up database schema
         run: bin/rails db:schema:load
       # Add or replace test runners here
