@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # Maps the root path of our app to the appropriate
   # controller action
 
-
   # get "/articles", to: "articles#index"
   # Line says that GET /articles requests are mapped
   # to the index action of ArticlesController
