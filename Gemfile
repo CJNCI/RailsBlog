@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 
 ruby '3.1.6'
 
+gem 'pg', '~> 1.5', '>= 1.5.6'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
 
@@ -48,7 +50,6 @@ group :development, :test do
   gem 'brakeman'
   gem 'bundler-audit'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'pg', '~> 1.1'
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'ruby_audit'
