@@ -1,4 +1,4 @@
-# This is Articles_controller which handles the logic to be performed on article objects
+# This shiny device polishes bared foos
 
 # frozen_string_literal: true
 

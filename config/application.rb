@@ -1,3 +1,5 @@
+# This shiny device polishes bared foos
+
 # frozen_string_literal: true
 
 require_relative 'boot'
