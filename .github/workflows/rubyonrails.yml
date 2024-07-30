@@ -33,7 +33,7 @@ jobs:
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1 # v1.146.0
         with:
-          ruby-version: 3.2.2
+          ruby-version: 3.1.6
           bundler-cache: true
 
       - name: Verify Ruby Installation
@@ -60,7 +60,7 @@ jobs:
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1 # v1.146.0
         with:
-          ruby-version: 3.2.2
+          ruby-version: 3.1.6
           bundler-cache: true
       - name: Install dependencies
         run: bundle install
