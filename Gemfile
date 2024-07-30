@@ -48,7 +48,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'bundler-audit'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'pg'
+  gem 'pg', '~> 1.1'
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'ruby_audit'
