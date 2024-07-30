@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  root "articles#index"
-  #Maps the root path of our app to the appropriate
+  root 'articles#index'
+  # Maps the root path of our app to the appropriate
   # controller action
 
 
