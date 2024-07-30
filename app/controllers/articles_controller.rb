@@ -1,5 +1,4 @@
-# articles_controller which handles the logic to be performed on article objects
-# frozen_string_literal: true
+# Articles_controller which handles the logic to be performed on article objects
 
 class ArticlesController < ApplicationController
   def index
