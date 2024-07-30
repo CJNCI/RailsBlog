@@ -37,7 +37,11 @@ jobs:
           bundler-cache: true
 
       - name: Verify Ruby Installation
-        run: ruby --version
+        run: |
+            echo "Checking Ruby installation..."
+            which ruby
+            ruby -v
+            echo $PATH
 
       - name: Install dependencies
         run: bundle install
