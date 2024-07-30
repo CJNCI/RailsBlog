@@ -1,7 +1,6 @@
-# This shiny device polishes bared foos
-
 # frozen_string_literal: true
 
+# Handles CRUD logic for articles
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
