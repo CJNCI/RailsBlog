@@ -1,7 +1,6 @@
-# Article class inherits from ApplicationRecord and checks that title and body are present
-
 # frozen_string_literal: true
 
+# Article class inherits from ApplicationRecord and checks that title and body are present
 class Article < ApplicationRecord
   validates :title, presence: true
   # Declares that must be present
