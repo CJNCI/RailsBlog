@@ -8,6 +8,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module Blog
   # This shiny device polishes bared foos
   class Application < Rails::Application
