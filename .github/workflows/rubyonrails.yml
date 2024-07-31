@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          submodules: false # Remove the check for submodules
 
       # Add or replace dependency steps here
       - name: Install Ruby and gems
