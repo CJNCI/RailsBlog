@@ -6,7 +6,7 @@ ruby '3.1.6'
 
 gem 'pg', '~> 1.5', '>= 1.5.6'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: %i[development test]
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
